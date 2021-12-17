@@ -1,0 +1,305 @@
+/* =================
+WRITE YOUR CSS HERE.
+Check the ⌄ for help with formatting and validating your code.
+You must write some CSS to complete this challenge.
+===================
+*/
+
+/* GENERAL */
+html,
+body {
+    margin: 0;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: rgba(0, 0, 0, 0.80);
+    width: 100vw;
+    height: 10vh;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2rem 0 0;
+}
+
+.nav-item {
+    padding: 0 5px 0 5px;
+    margin-top: 20px;
+}
+
+.nav-item_link {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.c-site-header {
+  height: 100%;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+  padding-right: 2rem;
+}
+
+header > h1 {
+  color: white;
+  font-size: 3.6rem;
+}
+
+#hero {
+  background-image: url(https://images.unsplash.com/photo-1638464241238-d110f0e59aa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  background-size: 100vw;
+  height: 90%;
+  width: 100vw;
+}
+
+
+/* CONTENT SECTION ONE */
+
+.section-one {
+  background-image: url(https://images.unsplash.com/photo-1638464241238-d110f0e59aa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  background-size: 100vw;
+  height: 90%;
+  width: 100vw;
+  transform: scaleX(-1);
+}
+
+.section-one_container {
+  display: flex;
+  height: 100%;
+  width: 100%; 
+  transform: scaleX(-1);
+}
+
+.img-left {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#imgSmoke {
+  opacity: 0.3;
+}
+
+.content-text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem 2rem 2rem;
+    width: 36%;
+    height: 100%;
+}
+
+.content-right > p {
+  display: flex;
+  justify-content: center;
+  padding: 0px 2rem 2rem 2rem;
+}
+
+/* CONTENT SECTION TWO */
+
+.section-two {
+  background-image: url(https://images.unsplash.com/photo-1638464241238-d110f0e59aa0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+  background-size: 100vw;
+  height: 90%;
+  width: 100vw;
+}
+
+.section-two_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%; 
+  margin-top: -5rem;
+}
+
+.my-music {
+  padding-top: 3rem;
+  width: 100%;
+  border: solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+}
+
+.my-music > h2 {
+  color: white;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.iframe-tablet {
+    display: none;
+}
+
+.iframe-mobile {
+    display: none;
+}
+
+/* FOOTER */
+
+footer {
+  background: rgba(0, 0, 0, 0.80);
+  width: 100vw;
+  height: 10vh;
+}
+
+.footer-item_link {
+    color: white;
+    text-decoration: none; 
+    margin-left: 2rem;
+}
+
+
+/*
+Common breakpoints are 
+1. 320px — 480px for mobile devices, 
+2. 481px — 768px for iPads & tablets, 
+3. 769px — 1024px for small screens like laptop
+======================
+Media Queries 
+======================
+*/
+
+
+/* *** iPads & tablets *** */
+@media only screen and (max-width: 768px) {
+    /* HERO SECTION */
+    header > h1 {
+      font-size: 2rem;
+    }  
+
+    .c-site-header {
+      height: 60%;
+    }
+
+    /* ABOUT SECTION - CONTENT SECTION ONE */
+    /* For tab and lower res */
+    #imgSmoke {
+      width: 100%;
+      opacity: 0.3;
+    }
+
+    .content-text {
+      position: absolute;
+      color: white;
+    
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 2rem 2rem 2rem;
+      width: 70%;
+      height: 88%;
+      background-color: black;
+      margin-right: 1rem;
+    }
+
+    /* MY MUSIC SECTION */
+    .iframe-desktop {
+        display: none;
+    }
+
+    .iframe-tablet {
+        display: flex;
+    }
+
+    .iframe-mobile {
+        display: none;
+    }
+}
+
+/* *** Mobile *** */
+@media only screen and (max-width: 480px) {
+    /* HERO SECTION */
+    /* #hero {
+        background-repeat: no-repeat;
+        background-size: 121vh;
+        height: 90%;
+    } */
+
+    header > h1 {
+      font-size: 1.5rem;
+    }  
+
+    .c-site-header {
+        height: 30%;
+        width: 70vw;
+    }
+
+    /* ABOUT SECTION - CONTENT SECTION ONE */
+
+    /* MY MUSIC SECTION */
+
+    .section-two {
+      transform: scaleX(-1);
+    }
+
+    .my-music {
+        transform: scaleX(-1);
+    }
+
+    .section-two_container {
+        transform: scaleX(-1);
+        height: 72%;
+        /* padding-right: 9px; */
+    }
+
+    .iframe-desktop {
+        display: none;
+    }
+
+    .iframe-tablet {
+        display: none;
+    }
+
+    .iframe-mobile {
+        display: flex;
+    }
+}
+
+/* Custom breakpoints */
+@media only screen and (max-width: 420px) {
+    /* ABOUT SECTION - CONTENT SECTION ONE */
+    .content-text {
+        margin-right: 0rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 612px) {
+    /* HERO SECTION */
+    #hero {
+        background-repeat: no-repeat;
+        background-size: 121vh;
+        height: 90%;
+    }
+
+    /* ABOUT SECTION - CONTENT SECTION ONE */
+}
+
+
+
+/* don't edit this */
+.jest-lite-report__status--pass {
+  background: var(--color-pass);
+}
+.jest-lite-report__errors { display:none }
